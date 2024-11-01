@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="./image/icon_fundo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White silence</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container"> <!-- Novo contêiner principal -->
+        <video autoplay muted loop class="background-video">
+            <source src="./video/haise.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+        <audio autoplay loop>
+            <source src="./audio/ost.mp3" type="audio/mpeg">
+        </audio>
+
+        <header class="header">
+            <div class="logo-container"> 
+                <img class="small-logo" src="./image/icon_fundo.png" alt="Logo">
+            </div>
+            <div class="container_header">
+                <button class="navbar-toggler" id="toggleButton" aria-label="Toggle navigation">
+                    <span class="hamburguer"></span>
+                    <span class="hamburguer"></span>
+                    <span class="hamburguer"></span>
+                </button>
+                <nav class="navbar" id="navbarNav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="./index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="./poemas.html" class="nav-link">Poemas</a></li>
+                        <li class="nav-item"><a href="./create.html" class="nav-link">Create</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <section class="banner">
+                <div class="banner-overlay"></div>
+                <h2>Bem-vindos ao White Silence</h2>
+
+                <div class="banner-button-container">
+                    <button onclick="window.location.href='poemas.html'" class="banner-button">Veja os Poemas</button>
+                </div>
+            </section>
+            
+            
+
+            <section class="descricao-site">
+                <div class="descricao-overlay"></div> <!-- Caixa de fundo -->
+                <p>Este é um espaço dedicado aos meus poemas. Aqui você encontrará escritos cheios de sentimentos e reflexões, cada palavra escolhida para expressar uma parte do meu mundo.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; Kaua Francino - Todos os direitos reservados</p>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

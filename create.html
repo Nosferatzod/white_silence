@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="./image/icon_fundo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White silence</title>
+  <link rel="stylesheet" href="./css/create.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="./video/haise.mp4" type="video/mp4">
+    </video>
+    <audio autoplay loop>
+        <source src="./audio/ost.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <header class="header">
+        <div class="logo-container">
+            <img class="small-logo" src="./image/icon.png" alt="Logo">
+        </div>
+        <div class="container">
+            <button class="navbar-toggler" id="toggleButton" aria-label="Toggle navigation">
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+                <span class="hamburguer"></span>
+            </button>
+            <nav class="navbar" id="navbarNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./poemas.html" class="nav-link">Poemas</a></li>
+                    <li class="nav-item"><a href="./create.html" class="nav-link active">Create</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="criar-poema-container">
+            <div class="contexto">
+                <p>Escreva seu poema e compartilhe sua inspiração. Preencha o título e o conteúdo abaixo e clique em "Publicar Poema" para adicionar sua criação ao nosso acervo. Sinta-se livre para expressar sua criatividade!</p>
+            </div>
+            <form class="criar-poema">
+                <label for="titulo">Título do Poema</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="conteudo">Escreva seu Poema</label>
+                <textarea id="conteudo" name="conteudo" rows="15" required></textarea>
+
+                <button type="submit">Publicar Poema</button>
+            </form>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>

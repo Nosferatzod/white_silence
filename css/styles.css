@@ -1,0 +1,560 @@
+/* Estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.nav-link.active {
+    color: #8A1A1A; /* Alterado para vermelho sangue */
+    font-weight: bold; /* Para destacar ainda mais */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    display: flex; /* Definindo o corpo como um contêiner flexível */
+    flex-direction: column; /* Coloca os filhos em coluna */
+    font-family: 'Playfair Display', serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(14, 14, 14, 0.8);
+    text-align: center;
+    padding: 1.4rem 2rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.background-video {
+    position: fixed; /* Fixa o vídeo na tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    object-fit: cover; /* Cobre todo o espaço sem distorcer */
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+.nav {
+    margin-left: auto;
+}
+
+/* Estilo do menu principal */
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #4a5568; /* Mantido original */
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.nav-link:hover {
+    color: #8A1A1A; /* Alterado para vermelho sangue ao passar o mouse */
+}
+/* Logo pequena */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.small-logo {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 50%; /* Se desejar uma logo circular */
+}
+/* Banner */
+.banner {
+    background-image: url('../image/lirio_aranha.jpg'); /* Coloque aqui o nome da nova imagem */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 30px;
+}
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.233);
+    border-radius: 30px;
+    z-index: 1;
+}
+.banner h2, .banner button {
+    position: relative; /* Coloca em um nível acima do overlay */
+    z-index: 2; /* Garantindo que o texto fique acima */
+}
+.banner-button-container {
+    margin-top: 20px; /* Espaçamento acima do botão */
+}
+.banner-button {
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto */
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid #ffffff; /* Borda branca */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mão ao passar o mouse */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+}
+.banner-button:hover {
+    background-color: #ffffff; /* Cor de fundo ao passar o mouse */
+    color: #000000; /* Cor do texto ao passar o mouse */
+}
+.banner-overlay h2 {
+    font-size: 36px;
+    color: #8A1A1A; /* Alterado para vermelho sangue */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.banner-overlay button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #8A1A1A; /* Alterado para vermelho sangue */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-overlay button:hover {
+    background-color: #8B0000; /* Vermelho mais escuro ao passar o mouse */
+}
+
+/* Descrição do site */
+/* Estilos para a caixa transparente atrás do conteúdo */
+.descricao-site {
+    position: relative;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    color: #8A1A1A; /* Alterado para vermelho sangue */
+    font-size: 1.1em;
+    line-height: 1.6;
+    border-left: 4px solid #8A1A1A; /* Alterado para vermelho sangue */
+    padding-left: 15px;
+}
+
+/* Caixa de fundo com efeito transparente */
+.descricao-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.692); /* Ajuste a opacidade aqui */
+    border-radius: 15px;
+    z-index: -1; /* Para ficar atrás do texto */
+}
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço disponível */
+    padding-bottom: 20px; /* Espaço para evitar que o conteúdo encoste no rodapé */
+}
+/* Rodapé */
+footer {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    color: #8A1A1A; /* Alterado para vermelho sangue */
+    font-size: 0.9em;
+    border-top: 2px solid #8A1A1A; /* Alterado para vermelho sangue */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+  
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .small-logo {
+        width: 40px; /* Tamanho menor para mobile, ajuste se necessário */
+    }
+}
+
+/* Estilos para o botão hamburguer */
+.navbar-toggler {
+    display: none;
+    /* Inicialmente oculto */
+}
+
+.hamburguer {
+    display: block;
+    width: 40px;
+    /* Aumentar a largura */
+    height: 4px;
+    /* Aumentar a altura */
+    background-color: #8A1A1A; /* Alterado para vermelho sangue */
+    margin: 6px 0;
+    /* Aumentar a margem entre os elementos do botão */
+    border-radius: 2px;
+    /* Bordas arredondadas */
+    transition: all 0.3s ease;
+}
+
+.box-superior,
+.box-inferior {
+    color: #fff;
+    background: rgba(32, 0, 61, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .container_header {
+        max-width: 100%;
+        /* Altera para 100% */
+        padding: 0 10px;
+        /* Reduz padding */
+        flex-direction: column;
+        /* Empilha elementos */
+    }
+
+    .header {
+        padding: 40px 15px;
+        /* Ajusta o padding do cabeçalho */
+    }
+
+/* Botão hamburguer estilizado */
+.navbar-toggler {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    background-color: rgba(14, 14, 14, 0.8); /* cor vibrante */
+    color: #ffffff;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.navbar-toggler:hover {
+    background-color: #8a1a1a8c; /* cor ao passar o mouse */
+    transform: scale(1.1); /* aumenta ligeiramente no hover */
+}
+
+.navbar-toggler:active {
+    background-color: #8A1A1A; /* cor ao clicar */
+    transform: scale(1);
+}
+
+    .nav-list {
+        display: none;
+        /* Oculte a lista inicialmente */
+        flex-direction: column;
+        /* Alinha em coluna */
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        /* Largura total */
+        background-color: rgba(14, 14, 14, 0.8);
+        /* Fundo branco */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 9;
+    }
+
+    .navbar.active .nav-list {
+        display: flex;
+        /* Exibir a lista quando ativa */
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        /* Margem entre itens */
+        width: 100%;
+        /* Largura total dos itens */
+    }
+
+    .nav-link {
+        padding: 15px;
+        /* Padding para links */
+        display: block;
+        /* Ocupa total do espaço */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .banner-title {
+        font-size: 6vw;
+        /* Ajuste proporcional ao viewport */
+    }
+
+    .banner-description {
+        font-size: 4vw;
+        /* Ajuste proporcional ao viewport */
+        padding: 10px 20px;
+        /* Ajusta padding */
+    }
+
+    .service-card {
+        width: 90%;
+        /* Reduz a largura das cartas de serviço */
+        max-width: 300px;
+        /* Define uma largura máxima */
+        margin: 0 auto;
+        /* Centraliza */
+    }
+
+    .map-container iframe {
+        width: 100%;
+        /* Responsivo */
+        height: auto;
+        /* Mantém proporção */
+        max-height: 300px;
+        /* Altura máxima */
+    }
+
+    .footer-container {
+        padding: 10px;
+        /* Reduz padding do footer */
+    }
+
+    .footer-title {
+        font-size: 1.25rem;
+        /* Tamanho menor no footer */
+    }
+
+    .hours-title {
+        font-size: 1.2rem;
+        /* Ajusta o tamanho do horário */
+    }
+}
+
+
+/* Estilos para telas maiores */
+@media (min-width: 769px) {
+    .navbar {
+        display: flex;
+        /* Mostrar navbar para telas grandes */
+    }
+
+    .nav-list {
+        display: flex;
+        /* Exibir a lista como flex */
+        list-style: none;
+        /* Remove marcadores */
+        padding: 0;
+        /* Sem padding */
+    }
+
+    .nav-item {
+        margin-left: 20px;
+        /* Margem entre os itens */
+    }
+
+    .nav-link {
+        color: #4a5568;
+        /* Cor padrão dos links */
+        text-decoration: none;
+        /* Remove sublinhado */
+        padding: 10px 15px;
+        /* Padding dos links */
+    }
+
+    .nav-link:hover {
+        color: #8A1A1A;
+        /* Cor ao passar o mouse */
+    }
+}
+
+
+.banner {
+    background-image: url('../image/lirio.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 30px;
+    opacity: 0.7; /* Ajuste a opacidade da imagem aqui */
+}
+
+.banner h2, .banner-button-container {
+    position: relative; /* Coloca em um nível acima do overlay */
+    z-index: 2; /* Garantindo que o texto fique acima */
+}
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a cor e a opacidade aqui para dar um efeito de "brilho" */
+    border-radius: 30px;
+    z-index: 1; /* Fica abaixo do texto */
+}
+.banner-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+}
+.banner h2, .banner-button-container {
+    position: relative; /* Coloca em um nível acima do overlay */
+    z-index: 2; /* Garantindo que o texto fique acima */
+}
+.cta-button :active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.cta-button::after {
+    background-color: #ffffff;
+}
+
+.cta-button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background-color: #8A1A1A;
+    padding: 15px;
+    /* Unificado padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 100%;
+    /* Garantindo que não exceda 100% */
+    height: auto;
+    text-align: center;
+}
+
+.service-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    color: #fff;
+}
+
+.location {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.location-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    box-shadow: 10px 5px 5px red;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    border-radius: 30px;
+    width: 150px;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Horários */
+.hours-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
