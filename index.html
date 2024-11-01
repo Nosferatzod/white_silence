@@ -9,6 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script>
+        document.addEventListener("contextmenu", (event) => event.preventDefault());
+        document.onkeydown = function(e) {
+           if (e.key === "PrintScreen") {
+              alert("Print Screen desativado");
+              return false;
+           }
+           if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "p")) {
+              alert("Ações desativadas para proteger o conteúdo.");
+              return false;
+           }
+        };
+     </script>
+     
     <div class="page-container"> <!-- Novo contêiner principal -->
         <video autoplay muted loop class="background-video">
             <source src="./video/haise.mp4" type="video/mp4">
