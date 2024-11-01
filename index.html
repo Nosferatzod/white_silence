@@ -21,6 +21,19 @@
               return false;
            }
         };
+           // Avisa quando o usuário tenta copiar ou capturar tela
+   document.addEventListener("copy", function(event) {
+       alert("Copiar conteúdo não é permitido.");
+       event.preventDefault();
+   });
+
+   // Detecta tentativa de Print Screen com teclas de acesso rápido
+   document.addEventListener("keydown", function(event) {
+       if (event.key === "PrintScreen") {
+           alert("Captura de tela desativada.");
+           event.preventDefault();
+       }
+   });
      </script>
      
     <div class="page-container"> <!-- Novo contêiner principal -->

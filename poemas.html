@@ -14,6 +14,17 @@
 
   <body>
     <script>
+      document.addEventListener("contextmenu", (event) => event.preventDefault());
+document.onkeydown = function(e) {
+   if (e.key === "PrintScreen") {
+      alert("Print Screen desativado");
+      return false;
+   }
+   if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "p")) {
+      alert("Ações desativadas para proteger o conteúdo.");
+      return false;
+   }
+};
         function solicitarSenha() {
            let senha = prompt("Digite a senha para acessar o conteúdo:");
            if (senha !== "haise") {
@@ -22,6 +33,19 @@
            }
         }
         window.onload = solicitarSenha;
+           // Avisa quando o usuário tenta copiar ou capturar tela
+   document.addEventListener("copy", function(event) {
+       alert("Copiar conteúdo não é permitido.");
+       event.preventDefault();
+   });
+
+   // Detecta tentativa de Print Screen com teclas de acesso rápido
+   document.addEventListener("keydown", function(event) {
+       if (event.key === "PrintScreen") {
+           alert("Captura de tela desativada.");
+           event.preventDefault();
+       }
+   });
      </script>
      
     <video autoplay muted loop class="background-video">

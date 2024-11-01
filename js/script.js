@@ -22,3 +22,16 @@ document.onkeydown = function(e) {
       return false;
    }
 };
+
+document.addEventListener("copy", function(event) {
+   alert("Copiar conteúdo não é permitido.");
+   event.preventDefault();
+});
+
+// Detecta tentativa de Print Screen com teclas de acesso rápido
+document.addEventListener("keydown", function(event) {
+   if (event.key === "PrintScreen") {
+       alert("Captura de tela desativada.");
+       event.preventDefault();
+   }
+});
