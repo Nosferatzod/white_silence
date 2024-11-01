@@ -35,6 +35,18 @@ html, body {
     background-color: #1a1a1a;
     color: #8A1A1A;
   }
+  body::before {
+    content: "Kauã Francino";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    pointer-events: none;
+ }
+ 
   header {
     display: flex;
     justify-content: center;
