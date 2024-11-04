@@ -35,3 +35,21 @@ document.addEventListener("keydown", function(event) {
        event.preventDefault();
    }
 });
+
+
+function alerta() {
+    alert('A página não pode ser salva.');
+    return false;
+}
+
+function verificaBotao(oEvent) {
+    var tecla = (oEvent.keyCode) ? oEvent.keyCode : oEvent.which;
+    if (tecla == 17 || tecla == 44 || tecla == 106) {
+        alerta();
+    }
+}
+
+document.onkeypress = verificaBotao;
+document.onkeydown = verificaBotao;
+document.oncontextmenu = alerta;
+

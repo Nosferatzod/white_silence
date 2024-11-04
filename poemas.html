@@ -25,19 +25,7 @@ document.onkeydown = function(e) {
       return false;
    }
 };
-        function solicitarSenha() {
-           let senha = prompt("Digite a senha para acessar o conteúdo:");
-           if (senha !== "haise") {
-              alert("Senha incorreta. Acesso negado.");
-              window.location.href = "./index.html"; // Redireciona para a página inicial
-           }
-        }
-        window.onload = solicitarSenha;
-           // Avisa quando o usuário tenta copiar ou capturar tela
-   document.addEventListener("copy", function(event) {
-       alert("Copiar conteúdo não é permitido.");
-       event.preventDefault();
-   });
+      
 
    // Detecta tentativa de Print Screen com teclas de acesso rápido
    document.addEventListener("keydown", function(event) {
@@ -46,6 +34,22 @@ document.onkeydown = function(e) {
            event.preventDefault();
        }
    });
+   function alerta() {
+    alert('A página não pode ser salva.');
+    return false;
+}
+
+function verificaBotao(oEvent) {
+    var tecla = (oEvent.keyCode) ? oEvent.keyCode : oEvent.which;
+    if (tecla == 17 || tecla == 44 || tecla == 106 || tecla == 91) {
+        alerta();
+    }
+}
+
+document.onkeypress = verificaBotao;
+document.onkeydown = verificaBotao;
+document.oncontextmenu = alerta;
+
      </script>
      
     <video autoplay muted loop class="background-video">

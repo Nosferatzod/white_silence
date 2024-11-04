@@ -1,5 +1,14 @@
 /* Estilo básico */
 /* Estilo básico */
+#naoimprime
+{
+display: none;
+}
+#imprime
+{
+display:block;
+}
+
 * {
     margin: 0;
     padding: 0;

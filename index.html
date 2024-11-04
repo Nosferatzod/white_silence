@@ -4,38 +4,65 @@
     <link rel="icon" href="./image/icon_fundo.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>White silence</title>
+    <title>White Silence</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/print.css" media="print"> <!-- Adicionando o CSS de impressão -->
+
 </head>
 <body>
     <script>
         document.addEventListener("contextmenu", (event) => event.preventDefault());
-        document.onkeydown = function(e) {
-           if (e.key === "PrintScreen") {
-              alert("Print Screen desativado");
-              return false;
-           }
-           if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "p")) {
-              alert("Ações desativadas para proteger o conteúdo.");
-              return false;
-           }
-        };
-           // Avisa quando o usuário tenta copiar ou capturar tela
-   document.addEventListener("copy", function(event) {
-       alert("Copiar conteúdo não é permitido.");
-       event.preventDefault();
-   });
 
-   // Detecta tentativa de Print Screen com teclas de acesso rápido
-   document.addEventListener("keydown", function(event) {
-       if (event.key === "PrintScreen") {
-           alert("Captura de tela desativada.");
-           event.preventDefault();
-       }
-   });
-     </script>
-     
+        document.onkeydown = function(e) {
+            if (e.key === "PrintScreen") {
+                alert("Print Screen desativado");
+                e.preventDefault(); // Previne a ação
+                return false;
+            }
+            if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "p")) {
+                alert("Ações desativadas para proteger o conteúdo.");
+                e.preventDefault(); // Previne a ação
+                return false;
+            }
+        };
+
+        // Avisa quando o usuário tenta copiar
+        document.addEventListener("copy", function(event) {
+            alert("Copiar conteúdo não é permitido.");
+            event.preventDefault(); // Previne a cópia
+        });
+
+        // Detecta tentativa de Print Screen com teclas de acesso rápido
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "PrintScreen") {
+                alert("Captura de tela desativada.");
+                event.preventDefault();
+            }
+        });
+
+        
+function alerta() {
+    alert('A página não pode ser salva.');
+    return false;
+}
+
+function verificaBotao(oEvent) {
+    var tecla = (oEvent.keyCode) ? oEvent.keyCode : oEvent.which;
+    if (tecla == 17 || tecla == 44 || tecla == 106 || tecla == 91) {
+        alerta();
+    }
+}
+
+document.onkeypress = verificaBotao;
+document.onkeydown = verificaBotao;
+document.oncontextmenu = alerta;
+
+
+    </script>
+
+        
+
     <div class="page-container"> <!-- Novo contêiner principal -->
         <video autoplay muted loop class="background-video">
             <source src="./video/haise.mp4" type="video/mp4">
@@ -74,13 +101,16 @@
                     <button onclick="window.location.href='poemas.html'" class="banner-button">Veja os Poemas</button>
                 </div>
             </section>
-            
-            
 
-            <section class="descricao-site">
+            <section class="descricao-site" id="imprime">
                 <div class="descricao-overlay"></div> <!-- Caixa de fundo -->
                 <p>Este é um espaço dedicado aos meus poemas. Aqui você encontrará escritos cheios de sentimentos e reflexões, cada palavra escolhida para expressar uma parte do meu mundo.</p>
             </section>
+
+            <div id="naoimprime">
+                <!-- Conteúdo que não deve ser impresso -->
+                <p>Conteúdo confidencial que não deve ser impresso.</p>
+            </div>
         </main>
 
         <footer>
