@@ -29,7 +29,7 @@ display:block;
     box-sizing: border-box;
 }
 .nav-link.active {
-    color: #8A1A1A; /* Alterado para vermelho sangue */
+    color: #F50A0E; /* Alterado para vermelho sangue */
     font-weight: bold; /* Para destacar ainda mais */
 }
 html, body {

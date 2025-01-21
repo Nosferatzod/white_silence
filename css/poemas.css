@@ -30,7 +30,7 @@ display:block;
     box-sizing: border-box;
 }
 .nav-link.active {
-    color: #8A1A1A; /* Cor desejada quando ativo */
+    color: #F50A0E; /* Cor desejada quando ativo */
     font-weight: bold; /* Para destacar ainda mais */
 }
 html, body {
@@ -51,7 +51,7 @@ html, body {
     flex-direction: column; /* Coloca os filhos em coluna */
     font-family: 'Playfair Display', serif;
     background-color: #1a1a1a;
-    color: #8A1A1A;
+    color: #F50A0E;
   }
   body::before {
     content: "Kauã Francino";
@@ -78,7 +78,7 @@ html, body {
     z-index: 1000;
 }
   header h1 {
-    color: #8A1A1A;
+    color: #F50A0E;
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   }
@@ -132,7 +132,7 @@ html, body {
   
   .poema {
     position: relative;
-    border-left: 4px solid #8A1A1A; /* Linha à esquerda */
+    border-left: 4px solid #F50A0E; /* Linha à esquerda */
     padding-left: 15px;
     margin-bottom: 20px;
     padding: 20px;
@@ -152,7 +152,7 @@ html, body {
   
   .poema h2 {
     font-size: 1.6em;
-    color: #921919;
+    color: #F50A0E;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
   

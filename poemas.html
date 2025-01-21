@@ -1,231 +1,271 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./image/icon_fundo.png" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>White silence</title>
-    <link rel="stylesheet" href="./css/poemas.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <script>
-      document.addEventListener("contextmenu", (event) => event.preventDefault());
-document.onkeydown = function(e) {
-   if (e.key === "PrintScreen") {
-      alert("Print Screen desativado");
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./image/icon_fundo.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>White silence</title>
+  <link rel="stylesheet" href="./css/poemas.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <script>
+    document.addEventListener("contextmenu", (event) => event.preventDefault());
+    document.onkeydown = function (e) {
+      if (e.key === "PrintScreen") {
+        alert("Print Screen desativado");
+        return false;
+      }
+      if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "p")) {
+        alert("Ações desativadas para proteger o conteúdo.");
+        return false;
+      }
+    };
+
+
+    // Detecta tentativa de Print Screen com teclas de acesso rápido
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "PrintScreen") {
+        alert("Captura de tela desativada.");
+        event.preventDefault();
+      }
+    });
+    function alerta() {
+      alert('A página não pode ser salva.');
       return false;
-   }
-   if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "p")) {
-      alert("Ações desativadas para proteger o conteúdo.");
-      return false;
-   }
-};
-      
-
-   // Detecta tentativa de Print Screen com teclas de acesso rápido
-   document.addEventListener("keydown", function(event) {
-       if (event.key === "PrintScreen") {
-           alert("Captura de tela desativada.");
-           event.preventDefault();
-       }
-   });
-   function alerta() {
-    alert('A página não pode ser salva.');
-    return false;
-}
-
-function verificaBotao(oEvent) {
-    var tecla = (oEvent.keyCode) ? oEvent.keyCode : oEvent.which;
-    if (tecla == 17 || tecla == 44 || tecla == 106 || tecla == 91) {
-        alerta();
     }
-}
 
-document.onkeypress = verificaBotao;
-document.onkeydown = verificaBotao;
-document.oncontextmenu = alerta;
+    function verificaBotao(oEvent) {
+      var tecla = (oEvent.keyCode) ? oEvent.keyCode : oEvent.which;
+      if (tecla == 17 || tecla == 44 || tecla == 106 || tecla == 91) {
+        alerta();
+      }
+    }
 
-     </script>
-     
-    <video autoplay muted loop class="background-video">
-      <source src="./video/haise.mp4" type="video/mp4" />
-    </video>
-    <audio autoplay loop><source src="./audio/ost.mp3" audio/mpeg"></audio>
-    <header class="header">
-      <div class="logo-container">
-        <img class="small-logo" src="./image/icon.png" alt="Logo" />
+    document.onkeypress = verificaBotao;
+    document.onkeydown = verificaBotao;
+    document.oncontextmenu = alerta;
+
+  </script>
+
+  <video autoplay muted loop class="background-video">
+    <source src="./video/haise.mp4" type="video/mp4" />
+  </video>
+  <audio autoplay loop>
+    <source src="./audio/ost.mp3" audio/mpeg">
+  </audio>
+  <header class="header">
+    <div class="logo-container">
+      <img class="small-logo" src="./image/icon.png" alt="Logo" />
+    </div>
+    <div class="container">
+      <button class="navbar-toggler" id="toggleButton" aria-label="Toggle navigation">
+        <span class="hamburguer"></span>
+        <span class="hamburguer"></span>
+        <span class="hamburguer"></span>
+        <span class="hamburguer"></span>
+      </button>
+      <nav class="navbar" id="navbarNav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./poemas.html" class="nav-link active">Poemas</a>
+          </li>
+          <li class="nav-item">
+            <a href="./create.html" class="nav-link">Create</a>
+          </li>
+          <li class="nav-item"><a href="./contact.html" class="nav-link">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="poemas">
+      <script>
+        document.addEventListener("contextmenu", (event) => event.preventDefault());
+        document.onkeydown = function (e) {
+          if (e.key === "PrintScreen") {
+            alert("Print Screen desativado");
+            return false;
+          }
+          if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "p")) {
+            alert("Ações desativadas para proteger o conteúdo.");
+            return false;
+          }
+        };
+      </script>
+      <div class="poema">
+        <h2>"Há um diabinho dentro de todos nós."</h2>
+        <p>
+          Sob essa percepção fabricada — uma realidade artificial — está um
+          emaranhado de pavores retorcidos: repulsa, julgamento, elitismo,
+          insegurança. Todos se contorcem, ansiando por escapar das frágeis
+          mãos do hospedeiro, infiltrando-se por cada pequena fenda que
+          encontram. Na força de sua vontade, ele tenta privá-los de desejo e
+          motivação. No estômago, obriga-os a afogar a culpa em pratos
+          deliciosos. Na pele, os oculta sob as mangas de uma camisa nova,
+          escondendo um corte ainda fresco. Essa massa deplorável e emaranhada
+          já habita todos eles. Por isso, recuso-me a carregar a culpa por
+          seus atos. Tudo que fiz foi desatar o nó.
+        </p>
       </div>
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          id="toggleButton"
-          aria-label="Toggle navigation"
-        >
-        <span class="hamburguer"></span>
-        <span class="hamburguer"></span>
-        <span class="hamburguer"></span>
-        <span class="hamburguer"></span>
-        </button>
-        <nav class="navbar" id="navbarNav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="./index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="./poemas.html" class="nav-link active">Poemas</a>
-            </li>
-            <li class="nav-item">
-              <a href="./create.html" class="nav-link">Create</a>
-            </li>
-            <li 
-            class="nav-item"><a href="./contact.html" class="nav-link">Contato</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="poema">
+        <h2>"Forjado na Adversidade"</h2>
+        <p>
+          As pessoas ruins, aquelas que te ferem com olhares cortantes, que te
+          encaram com desdém, e te humilham, baixinho ou em voz alta, são as
+          mesmas que forjam tua armadura. São elas, com palavras pesadas, com
+          gestos frios e silêncios afiados, que sem querer esculpem tua força.
+          E então, um dia, descobres que já não sangras com suas farpas, que
+          seus julgamentos deslizam sem marca. Aprendes a caminhar sem olhar
+          para trás, sem dar importância ao que tentaram te fazer acreditar.
+          Forte o suficiente para não caber em suas palavras, forte o
+          suficiente para seguir, sem o peso da opinião delas, e de ninguém.
+        </p>
       </div>
-    </header>
+      <div class="poema">
+        <h2>"O Céu Cai"</h2>
+        <p>
+          Eu tive um sonho — o céu caía. Manchas de sangue, que não saem. Não
+          importa quantas vezes eu lave com água morna, elas permanecem, rubro
+          viscoso preso no ralo. Palavras dissolvem-se, girando em espirais,
+          presas também, no mesmo ralo. E me torno incapaz de me perdoar.
+          Imperdoável. Eu tive um sonho, uma falha de Deus. Ela riu enquanto
+          apertava minha garganta. Sempre assim. Somente quem é indiferente à
+          dor me fere. Ela me amava, mas não sabia como amar. Que Deus
+          estúpido. Meus nervos, crescendo tortos, perfuram minha pele. Todos
+          de uma vez, eles cantam. Ao longe, risos – a voz nem é minha mais.
+          Meu cérebro se torna transparente. Não há nada que eu não possa ver.
+          Saber o que antes eu ignorava – e morro. Eu tive um sonho em que o
+          céu caía. Um céu quadriculado em preto e branco. Esmagado sob ele,
+          eu morri. Sim, desejei isso. Triste, não é? Um final que se encontra
+          no próximo capítulo.
+        </p>
+      </div>
+      <div class="poema">
+        <h2>"Vínculo Mortal"</h2>
+        <p>
+          Então, esta é uma caixa que descobri escondida em um shopping há
+          presumivelmente cerca de 6 meses. Além do trinco, havia faixas de
+          borracha mantendo a caixa fechada. Dentro, encontrei um pacote de
+          pedaços de papel bem dobrados. É uma história/lembrança escrita por
+          uma garota de 19 anos que, aparentemente, matou uma pessoa aleatória
+          apenas porque se perguntava como seria. De acordo com o artigo, ela
+          escreveu isso apenas algumas horas após o assassinato e sou a
+          primeira pessoa a lê-lo. Então, sim, duvido que eu consiga dormir
+          esta noite. De qualquer forma, escrevi toda a história porque
+          preciso ser sincero e compartilhar isso. Aqui está… Suco de Besouro
+          Se você encontrou esta nota em uma pequena caixa de madeira com um
+          coração, então parabéns! Você provavelmente é a primeira pessoa a
+          lê-la. Eu realmente não planejava compartilhar isso com ninguém,
+          mas, por algum motivo, acho excitante que alguém lá fora, um
+          completo estranho, se deparará com esta nota e lerá minha história.
+          Alguém que nunca encontrarei, compartilhando um vínculo tão pessoal
+          comigo. Estou fascinado com o fato de que qualquer um de nós poderia
+          morrer — mesmo amanhã — e o outro não tem a menor ideia disso. Para
+          você, minha vida inteira está dentro desta nota, e então vou viver
+          enquanto a sua memória puder me levar. Escrevendo isso, estou
+          pensando se isso faz você se sentir fascinado ou violado. É tão
+          emocionante. Desculpe-me se minha história estiver um pouco
+          desorganizada, mas eu gostaria de escrevê-la enquanto ainda estava
+          fresca na minha mente. Primeiro, vou falar um pouco sobre mim. Sou
+          uma garota do primeiro ano e, pela maioria dos padrões, levei uma
+          vida bastante espetacular até este ponto. Cresci em um distrito
+          escolar de classe média alta com professores decentes. Fui bem no
+          ensino médio e tive dois namorados. Agora, estou estudando para uma
+          carreira em terapia ocupacional porque sinto que o campo é
+          subvalorizado e proporciona uma tremenda ajuda às pessoas. Estou lhe
+          dando esse pano de fundo porque há um equívoco estranho de que, se
+          você quer matar alguém, você está doente na cabeça ou tem problemas
+          de gerenciamento de raiva. Mas é evidente que não pertenço a nenhuma
+          dessas categorias. É verdade que a maioria dos casos de assassinato
+          ocorre em um ambiente doméstico, onde alguém perde o controle da
+          raiva ou algo assim. Mas o que acontece é que essas pessoas matam
+          sob provocação, seja por uma explosão singular ou por uma série de
+          infortúnios lentos. Elas matam porque, naquele breve momento, querem
+          que alguém específico, por uma razão específica, seja ferido ou
+          morto. O que estou falando é querer matar alguém sem um motivo
+          específico, talvez apenas para ver como é. Você já conseguiu isso?
+          Eu não saberia como os outros se sentem, porque não é algo que já
+          discuti. Mas fiquei curiosa sobre o que é matar alguém desde que era
+          criança. Não matando ninguém em particular, apenas uma pessoa
+          aleatória. Sempre me fascinou que, se eu pensasse nisso, poderia
+          abordar qualquer um, e em cinco minutos eles estariam completamente
+          afastados desta Terra. Mas eu nunca fiz isso por alguns motivos.
+          Antes de tudo, durante a maior parte da minha vida, era
+          logisticamente impossível para mim fazê-lo sem ser pega. Eu só
+          consegui minha carteira de motorista há alguns anos, e mesmo assim,
+          os preparativos levariam muito tempo, sem mencionar as suspeitas que
+          despertaria. Foi só quando comecei a faculdade que percebi que isso
+          não era mais um obstáculo. Outro motivo é que eu tinha medo de
+          causar danos a muitas pessoas. Você pode rir ao ler isso, de quão
+          hipócrita isso soa. Mas deixe-me explicar: por que eu me sentiria
+          mal em matar alguém se eles estão muito mortos para se importarem?
+          Para quem eu me sentiria mal? Ao contrário, é o sofrimento dos vivos
+          que eu prefiro não ser responsável. Por isso, eu sabia que
+          precisaria de uma boa pesquisa antes de encontrar uma pessoa
+          adequada para matar, e nunca tive os meios para fazê-lo — novamente,
+          até começar a faculdade. E agora, depois de ter experimentado, eu
+          diria que foi bastante satisfatório no final. Alguma coisa que eu
+          tentaria novamente? Provavelmente não, já que minha curiosidade já
+          foi satisfeita. Na verdade, não seria o mesmo pela segunda vez.
+        </p>
+      </div>
+      <div class="poema">
+        <h2>"Entre o Caos e a Luz"</h2>
+        <p>
+          O que é o ser humano?
+          A humanidade é definida por características que, juntas, moldam o que chamamos de "ser humano": empatia,
+          inteligência, pensamento abstrato, autorreflexão e racionalidade. Contudo, o que realmente nos diferencia de
+          outros seres vivos é a ética – a capacidade de discernir entre o bem e o mal, o certo e o errado. Ainda assim,
+          esses conceitos, moldados pela ética individual, podem ser distorcidos para se alinhar a diferentes
+          perspectivas.
 
-    <main>
-      <section class="poemas">
-        <script>
-            document.addEventListener("contextmenu", (event) => event.preventDefault());
-document.onkeydown = function(e) {
-   if (e.key === "PrintScreen") {
-      alert("Print Screen desativado");
-      return false;
-   }
-   if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "p")) {
-      alert("Ações desativadas para proteger o conteúdo.");
-      return false;
-   }
-};
-        </script>
-        <div class="poema">
-          <h2>"Há um diabinho dentro de todos nós."</h2>
-          <p>
-            Sob essa percepção fabricada — uma realidade artificial — está um
-            emaranhado de pavores retorcidos: repulsa, julgamento, elitismo,
-            insegurança. Todos se contorcem, ansiando por escapar das frágeis
-            mãos do hospedeiro, infiltrando-se por cada pequena fenda que
-            encontram. Na força de sua vontade, ele tenta privá-los de desejo e
-            motivação. No estômago, obriga-os a afogar a culpa em pratos
-            deliciosos. Na pele, os oculta sob as mangas de uma camisa nova,
-            escondendo um corte ainda fresco. Essa massa deplorável e emaranhada
-            já habita todos eles. Por isso, recuso-me a carregar a culpa por
-            seus atos. Tudo que fiz foi desatar o nó.
-          </p>
-        </div>
-        <div class="poema">
-          <h2>"Forjado na Adversidade"</h2>
-          <p>
-            As pessoas ruins, aquelas que te ferem com olhares cortantes, que te
-            encaram com desdém, e te humilham, baixinho ou em voz alta, são as
-            mesmas que forjam tua armadura. São elas, com palavras pesadas, com
-            gestos frios e silêncios afiados, que sem querer esculpem tua força.
-            E então, um dia, descobres que já não sangras com suas farpas, que
-            seus julgamentos deslizam sem marca. Aprendes a caminhar sem olhar
-            para trás, sem dar importância ao que tentaram te fazer acreditar.
-            Forte o suficiente para não caber em suas palavras, forte o
-            suficiente para seguir, sem o peso da opinião delas, e de ninguém.
-          </p>
-        </div>
-        <div class="poema">
-          <h2>"O Céu Cai"</h2>
-          <p>
-            Eu tive um sonho — o céu caía. Manchas de sangue, que não saem. Não
-            importa quantas vezes eu lave com água morna, elas permanecem, rubro
-            viscoso preso no ralo. Palavras dissolvem-se, girando em espirais,
-            presas também, no mesmo ralo. E me torno incapaz de me perdoar.
-            Imperdoável. Eu tive um sonho, uma falha de Deus. Ela riu enquanto
-            apertava minha garganta. Sempre assim. Somente quem é indiferente à
-            dor me fere. Ela me amava, mas não sabia como amar. Que Deus
-            estúpido. Meus nervos, crescendo tortos, perfuram minha pele. Todos
-            de uma vez, eles cantam. Ao longe, risos – a voz nem é minha mais.
-            Meu cérebro se torna transparente. Não há nada que eu não possa ver.
-            Saber o que antes eu ignorava – e morro. Eu tive um sonho em que o
-            céu caía. Um céu quadriculado em preto e branco. Esmagado sob ele,
-            eu morri. Sim, desejei isso. Triste, não é? Um final que se encontra
-            no próximo capítulo.
-          </p>
-        </div>
-        <div class="poema">
-          <h2>"Vínculo Mortal"</h2>
-          <p>
-            Então, esta é uma caixa que descobri escondida em um shopping há
-            presumivelmente cerca de 6 meses. Além do trinco, havia faixas de
-            borracha mantendo a caixa fechada. Dentro, encontrei um pacote de
-            pedaços de papel bem dobrados. É uma história/lembrança escrita por
-            uma garota de 19 anos que, aparentemente, matou uma pessoa aleatória
-            apenas porque se perguntava como seria. De acordo com o artigo, ela
-            escreveu isso apenas algumas horas após o assassinato e sou a
-            primeira pessoa a lê-lo. Então, sim, duvido que eu consiga dormir
-            esta noite. De qualquer forma, escrevi toda a história porque
-            preciso ser sincero e compartilhar isso. Aqui está… Suco de Besouro
-            Se você encontrou esta nota em uma pequena caixa de madeira com um
-            coração, então parabéns! Você provavelmente é a primeira pessoa a
-            lê-la. Eu realmente não planejava compartilhar isso com ninguém,
-            mas, por algum motivo, acho excitante que alguém lá fora, um
-            completo estranho, se deparará com esta nota e lerá minha história.
-            Alguém que nunca encontrarei, compartilhando um vínculo tão pessoal
-            comigo. Estou fascinado com o fato de que qualquer um de nós poderia
-            morrer — mesmo amanhã — e o outro não tem a menor ideia disso. Para
-            você, minha vida inteira está dentro desta nota, e então vou viver
-            enquanto a sua memória puder me levar. Escrevendo isso, estou
-            pensando se isso faz você se sentir fascinado ou violado. É tão
-            emocionante. Desculpe-me se minha história estiver um pouco
-            desorganizada, mas eu gostaria de escrevê-la enquanto ainda estava
-            fresca na minha mente. Primeiro, vou falar um pouco sobre mim. Sou
-            uma garota do primeiro ano e, pela maioria dos padrões, levei uma
-            vida bastante espetacular até este ponto. Cresci em um distrito
-            escolar de classe média alta com professores decentes. Fui bem no
-            ensino médio e tive dois namorados. Agora, estou estudando para uma
-            carreira em terapia ocupacional porque sinto que o campo é
-            subvalorizado e proporciona uma tremenda ajuda às pessoas. Estou lhe
-            dando esse pano de fundo porque há um equívoco estranho de que, se
-            você quer matar alguém, você está doente na cabeça ou tem problemas
-            de gerenciamento de raiva. Mas é evidente que não pertenço a nenhuma
-            dessas categorias. É verdade que a maioria dos casos de assassinato
-            ocorre em um ambiente doméstico, onde alguém perde o controle da
-            raiva ou algo assim. Mas o que acontece é que essas pessoas matam
-            sob provocação, seja por uma explosão singular ou por uma série de
-            infortúnios lentos. Elas matam porque, naquele breve momento, querem
-            que alguém específico, por uma razão específica, seja ferido ou
-            morto. O que estou falando é querer matar alguém sem um motivo
-            específico, talvez apenas para ver como é. Você já conseguiu isso?
-            Eu não saberia como os outros se sentem, porque não é algo que já
-            discuti. Mas fiquei curiosa sobre o que é matar alguém desde que era
-            criança. Não matando ninguém em particular, apenas uma pessoa
-            aleatória. Sempre me fascinou que, se eu pensasse nisso, poderia
-            abordar qualquer um, e em cinco minutos eles estariam completamente
-            afastados desta Terra. Mas eu nunca fiz isso por alguns motivos.
-            Antes de tudo, durante a maior parte da minha vida, era
-            logisticamente impossível para mim fazê-lo sem ser pega. Eu só
-            consegui minha carteira de motorista há alguns anos, e mesmo assim,
-            os preparativos levariam muito tempo, sem mencionar as suspeitas que
-            despertaria. Foi só quando comecei a faculdade que percebi que isso
-            não era mais um obstáculo. Outro motivo é que eu tinha medo de
-            causar danos a muitas pessoas. Você pode rir ao ler isso, de quão
-            hipócrita isso soa. Mas deixe-me explicar: por que eu me sentiria
-            mal em matar alguém se eles estão muito mortos para se importarem?
-            Para quem eu me sentiria mal? Ao contrário, é o sofrimento dos vivos
-            que eu prefiro não ser responsável. Por isso, eu sabia que
-            precisaria de uma boa pesquisa antes de encontrar uma pessoa
-            adequada para matar, e nunca tive os meios para fazê-lo — novamente,
-            até começar a faculdade. E agora, depois de ter experimentado, eu
-            diria que foi bastante satisfatório no final. Alguma coisa que eu
-            tentaria novamente? Provavelmente não, já que minha curiosidade já
-            foi satisfeita. Na verdade, não seria o mesmo pela segunda vez.
-          </p>
-        </div>
-         
-        <!-- Adicione mais poemas conforme necessário -->
-      </section>
-    </main>
-    <script src="./js/script.js"></script>
-  </body>
+          Se essas características definem o ser humano, o que, então, nos torna realmente humanos? Essa é uma das
+          perguntas mais complexas da existência. A resposta pode nos ajudar a compreender quem somos, por que estamos
+          aqui e para onde vamos. No entanto, refletir sobre o que nos torna humanos é tão desafiador quanto a própria
+          resposta.
+
+          Talvez o que nos torne humanos seja justamente a busca por sentido em meio ao caos da existência. Somos
+          capazes de refletir sobre questões profundas, de destruir sem remorso e, ao mesmo tempo, de cuidar e amar
+          intensamente. Sentimos afeto por coisas tão falhas e imperfeitas quanto nós mesmos. Em essência, ser humano é
+          abraçar essa dualidade: um misto de fragilidade, complexidade e uma incessante busca por significado.
+
+          Mas o que significa amadurecer? Crescer não é apenas enfrentar tragédias ou eventos grandiosos. O
+          amadurecimento se revela nos pequenos desafios cotidianos – aqueles que, pouco a pouco, desgastam nossa
+          essência. É o cabelo que cai no travesseiro, o pão favorito que desaparece do mercado, os planos que nunca
+          saem do papel. São esses pequenos desapontamentos, não as grandes tragédias, que nos transformam.
+
+          Tornar-se adulto é aceitar que a vida raramente está sob controle. É aprender que os finais felizes não são
+          garantidos e que a incerteza é uma constante. É enfrentar as microcrises de significado, quando tudo parece um
+          amontoado de frustrações, e ainda assim seguir em frente. Ser humano é lidar com o caos, encontrar beleza no
+          meio da confusão e valorizar as pequenas coisas.
+
+          O que realmente nos torna humanos é a resiliência. Mesmo diante do desespero, encontramos lampejos de bondade
+          e beleza. É o conforto de um pão simples, o sorriso de quem amamos, ou a sensação de fazer a diferença para
+          alguém. A verdadeira felicidade não está no dinheiro ou nas posses, mas nas conexões que criamos, nos momentos
+          que compartilhamos e no bem que fazemos.
+
+          Sacrifício, no sentido mais profundo, não é abrir mão de bens materiais, mas oferecer o melhor de nós. É
+          proteger, cuidar e amar, mesmo quando o mundo não é justo ou recompensador. Ser humano é conviver com as
+          imperfeições da vida e, ainda assim, escolher o bem.
+
+          No final, o que importa são as marcas que deixamos no mundo: as conexões que criamos, os momentos de alegria
+          que proporcionamos e a bondade que espalhamos. Essas são as coisas que nos completam, que nos dão propósito e
+          que nos fazem ser lembrados, mesmo depois que partimos.
+        </p>
+      </div>
+
+      <!-- Adicione mais poemas conforme necessário -->
+    </section>
+  </main>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>

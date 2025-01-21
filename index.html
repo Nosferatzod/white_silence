@@ -17,23 +17,21 @@
         document.onkeydown = function(e) {
             if (e.key === "PrintScreen") {
                 alert("Print Screen desativado");
-                e.preventDefault(); // Previne a ação
+                e.preventDefault(); 
                 return false;
             }
             if (e.ctrlKey && (e.key === "c" || e.key === "u" || e.key === "p")) {
                 alert("Ações desativadas para proteger o conteúdo.");
-                e.preventDefault(); // Previne a ação
+                e.preventDefault(); 
                 return false;
             }
         };
 
-        // Avisa quando o usuário tenta copiar
         document.addEventListener("copy", function(event) {
             alert("Copiar conteúdo não é permitido.");
-            event.preventDefault(); // Previne a cópia
+            event.preventDefault();
         });
 
-        // Detecta tentativa de Print Screen com teclas de acesso rápido
         document.addEventListener("keydown", function(event) {
             if (event.key === "PrintScreen") {
                 alert("Captura de tela desativada.");
@@ -110,7 +108,6 @@ document.oncontextmenu = alerta;
             </section>
 
             <div id="naoimprime">
-                <!-- Conteúdo que não deve ser impresso -->
                 <p>Conteúdo confidencial que não deve ser impresso.</p>
             </div>
         </main>

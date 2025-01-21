@@ -29,7 +29,7 @@ display:block;
     box-sizing: border-box;
 }
 .nav-link.active {
-    color: #8A1A1A; /* Cor desejada quando ativo */
+    color: #F50A0E; /* Cor desejada quando ativo */
     font-weight: bold; /* Para destacar ainda mais */
 }
 html, body {
@@ -110,7 +110,7 @@ html, body {
     border-radius: 50%; /* Se desejar uma logo circular */
 }
   header h1 {
-    color: #8A1A1A;
+    color: #F50A0E;
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   }
@@ -128,7 +128,7 @@ html, body {
   /* Contexto */
   .contexto {
     font-size: 1.1em;
-    color: #af1010;
+    color: #F50A0E;
     background: rgba(61, 61, 92, 0.6);
     padding: 15px;
     border-radius: 5px;
@@ -155,7 +155,7 @@ html, body {
   
   .criar-poema label {
     font-size: 1.2em;
-    color: #a81818;
+    color: #F50A0E;
   }
   
   .criar-poema input[type="text"],
